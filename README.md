@@ -38,3 +38,38 @@ public class latihanmodul51{ //Ini adalah deklarasi kelas dengan nama latihanmod
             System.out.println(name1 + " " + name2 + " " + name3 + " "); //Ini adalah pernyataan cetak yang mencetak nilai dari name1, name2, dan name3, dipisahkan oleh spasi, ke layar.
       }
 }
+
+
+modul 5.2
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author HP 840 G3
+ */
+import javax.swing.*; //Baris ini mengimpor kelas-kelas yang diperlukan dari pustaka Swing untuk membuat GUI. 
+public class latihanmodul52 { //Deklarasi kelas latihanmodul52 yang merupakan nama kelas utama dalam program. 
+    public static void main(String[] args) { //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
+        String name1; //Deklarasi tiga variabel bertipe String yang akan digunakan untuk menyimpan input pengguna.
+        String name2; //Deklarasi tiga variabel bertipe String yang akan digunakan untuk menyimpan input pengguna. 
+        String name3; //Deklarasi tiga variabel bertipe String yang akan digunakan untuk menyimpan input pengguna.  
+        
+        //Tiga dialog input menggunakan JOptionPane.showInputDialog akan muncul di layar untuk meminta pengguna memasukkan kata-kata. Input yang dimasukkan    akan disimpan di variabel name1, name2, dan name3 secara berurutan.
+        name1 = JOptionPane.showInputDialog("Enter Word1");
+        name2 = JOptionPane.showInputDialog("Enter Word2");
+        name3 = JOptionPane.showInputDialog("Enter Word3");
+        
+        //Mencetak output ke konsol dengan menggunakan System.out.println yang menampilkan nilai dari variabel name1, name2, dan name3.
+        System.out.println("Word1 = "+name1);
+        System.out.println("Word2 = "+name2);
+        System.out.println("Word3 = "+name3);
+        
+        String msg = name1 + name2 + name3; //Menggabungkan nilai dari variabel name1, name2, dan name3 menjadi satu string dan menyimpannya dalam variabel msg. 
+        JOptionPane.showMessageDialog(null, msg); //Muncul dialog pesan dengan menggunakan JOptionPane.showMessageDialog, menampilkan isi dari variabel msg yang berisi gabungan kata-kata yang dimasukkan oleh pengguna.
+    }
+    
+} //Penutup dari kelas latihanmodul52.
