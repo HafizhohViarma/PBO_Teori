@@ -1,96 +1,40 @@
-# PBO_Teori
-pbo teori
-modul 4
-latihan 4.1
+modul 5.1
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package latihanmodul5; //Ini adalah pernyataan package yang menentukan namespace atau ruang nama untuk kelas-kelas dalam file ini.
 
 /**
  *
  * @author HP 840 G3
  */
-public class latihan41 { //<- Ini adalah blok class dengan nama latihan41
-    // Blok class dibuka dengan tanda kurung kurawal { kemudian ditutup atau diakhiri dengan }.
-    // Di dalam blok class, kita dapat mengisinya dengan method atau fungsi-fungsi dan juga variabel.
-    // Pada contoh di bawah, terdapat method main().
-    public static void main(String[] args) { // Method main() atau fungsi main() merupakan blok program yang akan dieksekusi pertama kali.
-        int number = 10; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat
-        char letter = 'a';  //Tipe data karakter tunggal
-        boolean result = true; // tipe boolean memiliki dua nilai yaitu benar (true) atau salah (false)
-        String str = "hello"; //string merupakan tipe data yang berisikan kumpulan kosong atau lebih karakter.
-        
-        System.out.println("Number=" +number);  // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("Letter=" +letter); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("result=" +result); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("str=" +str); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-    }
+ //Ini adalah pernyataan import yang mengimpor kelas-kelas yang diperlukan dari paket java.io. Kode ini mengimpor kelas BufferedReader, InputStreamReader, dan IOException.
+import java.io.BufferedReader; 
+import java.io.InputStreamReader;
+import java.io.IOException;
     
-    
-}
+public class latihanmodul51{ //Ini adalah deklarasi kelas dengan nama latihanmodul51. Kelas ini adalah kelas utama yang akan berisi metode main.
 
 
-latihan 4.2
-
-/**
- *
- * @author HP 840 G3
- */
-public class latihan42 {  //<- Ini adalah blok class dengan nama latihan42
-    // Blok class dibuka dengan tanda kurung kurawal { kemudian ditutup atau diakhiri dengan }.
-    // Di dalam blok class, kita dapat mengisinya dengan method atau fungsi-fungsi dan juga variabel.
-    // Pada contoh di bawah, terdapat method main().
-    public static void main(String[] args){  // Method main() atau fungsi main() merupakan blok program yang akan dieksekusi pertama kali.
-        int number1=10; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat 
-        int number2=20; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat
-        int number3=45; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat
-        int fathy=(number1+number2+number3)/3; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat. pada tipe ini pendeklarasian dilakukan secara langsung. 
-        
-        System.out.println("number1="+number1); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("number2="+number2); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("number3="+number3); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("Avarage is="+fathy); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-    }
-    
-}
-
-
-latihan 4.3
-
-/**
- *
- * @author HP 840 G3
- */
-public class latihan43 {  //<- Ini adalah blok class dengan nama latihan43
-    // Blok class dibuka dengan tanda kurung kurawal { kemudian ditutup atau diakhiri dengan }.
-    // Di dalam blok class, kita dapat mengisinya dengan method atau fungsi-fungsi dan juga variabel.
-    // Pada contoh di bawah, terdapat method main().
-    public static void main(String[] args) {   // Method main() atau fungsi main() merupakan blok program yang akan dieksekusi pertama kali.
-        int number1=10; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat
-        int number2=23; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat
-        int number3=5; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat
-        int score=0; //ini merupakan Tipe bilangan bulat yg biasanya digunakan untuk bilangan bulat
-        
-        score=(number2 > number3)?(number2>number1)? number2:number1:number3; //ini merupakan pendeklarasian score secara langsung
-        
-        System.out.println("number 1 = "+number1); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("number 2 = "+number2); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan. 
-        System.out.println("number 3 = "+number3); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("nilai tertingginya = "+score); // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-    }
-    
-}
-
-latihan 4.4
-
-/**
- *
- * @author HP 840 G3
- */
-public class latihan44 {  //<- Ini adalah blok class dengan nama latihan43
-    // Blok class dibuka dengan tanda kurung kurawal { kemudian ditutup atau diakhiri dengan }.
-    // Di dalam blok class, kita dapat mengisinya dengan method atau fungsi-fungsi dan juga variabel.
-    // Pada contoh di bawah, terdapat method main().
-    public static void main(String[] args) { // Method main() atau fungsi main() merupakan blok program yang akan dieksekusi pertama kali.
-        System.out.println("1. a / (b ^(c ^ d)) – e + f – (g * h) + i");   // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("2. (3 * 10) * (2 / 15) – 2 + (4 ^ (2 ^ 2))");  // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-        System.out.println("3. ((r ^ s) * t) / u) – v + (w ^ x) – y++");  // Ini adalah fungsi untuk menampilkan teks ke layar monitor diikuti oleh variabel yg telah di deklarasikan.
-    }
+      public static void main (String[] args){ //Ini adalah metode main, yang akan dijalankan ketika program dimulai. Metode ini menerima argumen dari baris perintah dalam bentuk array args. 
+            BufferedReader dataIN = new BufferedReader (new InputStreamReader (System.in)); //Ini adalah deklarasi objek dataIN yang bertipe BufferedReader. Objek ini digunakan untuk membaca input dari pengguna melalui keyboard. 
+            //Ini adalah deklarasi variabel bertipe String dengan nama name1, name2, dan name3. Variabel ini digunakan untuk menyimpan input dari pengguna.
+            String name1 = "";
+            String name2 = "";
+            String name3 = "";
+            
+            //Ini adalah blok try-catch yang menangani pengecualian yang mungkin terjadi saat membaca input dari pengguna. Baris-baris di dalam blok try akan mencetak pesan ke layar dan membaca input dari pengguna menggunakan metode readLine() dari objek dataIN. Jika ada pengecualian yang terjadi, ia akan ditangkap oleh blok catch dan tidak ada tindakan khusus yang dilakukan.
+            try{
+                System.out.println("Enter Word1=");
+                name1=dataIN.readLine();
+                System.out.println("Enter Word2=");
+                name2=dataIN.readLine();
+                System.out.println("Enter Word3");
+                name3=dataIN.readLine();
+                }catch(IOException e){
+                }
+            System.out.println(name1 + " " + name2 + " " + name3 + " "); //Ini adalah pernyataan cetak yang mencetak nilai dari name1, name2, dan name3, dipisahkan oleh spasi, ke layar.
+      }
 }
