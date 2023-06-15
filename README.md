@@ -1,398 +1,226 @@
-modul 6
+modul 7 
 
-6.5.1 Nilai 1
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas nilai16 berada dalam paket latihanmodul6.
-
-/**
- *
- * @author HP 840 G3
- */
- 
-import java.io.BufferedReader; 
-import java.io.InputStreamReader;
-import java.io.IOException;
-//Baris ini mengimpor kelas-kelas yang diperlukan dari pustaka java.io untuk membaca input pengguna dan mengatasi pengecualian I/O.
-
-public class nilai16 { //Deklarasi kelas nilai16 yang merupakan nama kelas utama dalam program.
- public static void main(String[]args){ //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
-  BufferedReader nilai = new BufferedReader(new InputStreamReader(System.in)); //Objek BufferedReader digunakan untuk membaca input dari pengguna. Ini mengambil input dari System.in dan membungkusnya dalam InputStreamReader.
-  
-  //Deklarasi tiga variabel bertipe String yang akan digunakan untuk menyimpan input pengguna.
-  String r="";
-  String s="";
-  String t="";
-  
-  try{
-   System.out.print("Masukkan nilai pertama Anda: ");
-   r = nilai.readLine();
-   System.out.print("Masukkan nilai kedua Anda: ");
-   s = nilai.readLine();
-   System.out.print("Masukkan nilai ketiga Anda: ");
-   t = nilai.readLine();
-  }catch(IOException e){
-   System.out.println("Kata yang Anda masukkan salah, silahkan coba lagi.");
-  }
-  
-  //Pada blok try, program mencoba membaca input pengguna menggunakan nilai.readLine(). Jika terjadi pengecualian IOException, blok catch akan menangkapnya dan mencetak pesan kesalahan.
-  
-  //Mengonversi tiga variabel r, s, dan t yang berisi input pengguna dalam bentuk String menjadi tipe data int.
-  int pertama;
-  int kedua;
-  int ketiga;
-  
-  pertama = Integer.parseInt(r);
-  kedua = Integer.parseInt(s);
-  ketiga = Integer.parseInt(t);
-  
-  int rata_rata=(pertama+kedua+ketiga)/3; //Menghitung rata-rata dari tiga nilai yang dimasukkan pengguna dengan menjumlahkan nilai-nila tersebut dan membaginya dengan 3.
-  
-  System.out.println("Rata-rata nilai Anda: "+rata_rata); //Mencetak output ke konsol yang menampilkan rata-rata nilai yang dihitung.
-  
-  //Menggunakan pernyataan if untuk mengecek apakah rata-rata nilai kurang dari atau sama dengan 60. Jika benar, mencetak ":-(", jika tidak, mencetak ":-)".
-   if (rata_rata<=60){System.out.println(":-(");
-  }
-  else {
-   System.out.println(":-)");
-  }
- }
-}
-
-6.5.1 Nilai 2
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas nilai26 berada dalam paket latihanmodul6. 
-
-/**
- *
- * @author HP 840 G3
- */
-import javax.swing.JOptionPane; //Baris ini mengimpor kelas JOptionPane dari pustaka Swing. Kelas ini digunakan untuk membuat dialog input dan dialog pesan.
-
-public class nilai26 { //Deklarasi kelas nilai26 yang merupakan nama kelas utama dalam program.
-    public static void main(String[]args){ //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
-    
-    //Deklarasi tiga variabel bertipe String yang akan digunakan untuk menyimpan input pengguna.
-  String r="";
-  String s="";
-  String t="";
-  
-  
-  r=JOptionPane.showInputDialog("Masukkan nilai pertama Anda"); //Muncul dialog input menggunakan JOptionPane.showInputDialog yang meminta pengguna memasukkan nilai pertama. Nilai yang dimasukkan akan disimpan di variabel r.
-  int pertama = Integer.valueOf(r).intValue(); //Mengonversi nilai yang ada di variabel r yang berisi input pengguna dalam bentuk String menjadi tipe data int menggunakan Integer.valueOf().
-  s=JOptionPane.showInputDialog("Masukkan nilai kedua Anda"); //Langkah yang sama seperti langkah sebelumnya dilakukan untuk mendapatkan dan mengonversi nilai kedua dan ketiga yang dimasukkan oleh pengguna.
-  int kedua = Integer.valueOf(s).intValue();
-  t=JOptionPane.showInputDialog("Masukkan nilai ketiga Anda");
-  int ketiga = Integer.valueOf(t).intValue();
-  
-  int rata_rata=(pertama+kedua+ketiga)/3; //Menghitung rata-rata dari tiga nilai yang dimasukkan pengguna dengan menjumlahkan nilai-nila tersebut dan membaginya dengan 3.
-  
-  //Menggunakan variabel hasil bertipe String untuk menyimpan hasil output yang akan ditampilkan dalam dialog pesan. Nilai-nilai pertama, kedua, ketiga, dan rata-rata ditambahkan ke variabel hasil. 
-  String hasil= "";
-  hasil += "Nilai pertama: " +pertama +"\n";
-  hasil += "Nilai kedua: " +kedua +"\n";
-  hasil += "Nilai ketiga: " +ketiga +"\n";
-  hasil += "Rata-rata nilai Anda adalah " +rata_rata+"\n";
-   
-   //Pernyataan if digunakan untuk mengecek apakah rata-rata nilai kurang dari atau sama dengan 60. Jika benar, ":-(\n" akan ditambahkan ke variabel hasil. Jika tidak, ":-)\n" akan ditambahkan.
-   if (rata_rata<=60){
-   hasil +=":-("+"\n";
-  }
-  else {hasil +=":-)"+"\n";
-  }
-  JOptionPane.showMessageDialog(null, hasil);  //Menampilkan dialog pesan menggunakan JOptionPane.showMessageDialog dengan isi pesan yang berada dalam variabel hasil. Pesan tersebut akan muncul dalam dialog pop-up.
-  }
- }
- 
- 
- 
- 6.5.2 Membaca bilangan
- 
- 
- 6.5.2.1 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas membacaBilanganIfElse6 berada dalam paket latihanmodul6.
-
-/**
- *
- * @author HP 840 G3
- */
-import javax.swing.JOptionPane; //Baris ini mengimpor kelas JOptionPane dari pustaka Swing. Kelas ini digunakan untuk membuat dialog input dan dialog pesan.
-public class membacaBilanganIfElse6 { //Deklarasi kelas membacaBilanganIfElse6 yang merupakan nama kelas utama dalam program.
-    public static void main(String[]args){ //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
-  String angka=""; //Deklarasi variabel angka bertipe String yang akan digunakan untuk menyimpan input pengguna.
-  angka=JOptionPane.showInputDialog("Silahkan masukkan angka "); //Muncul dialog input menggunakan JOptionPane.showInputDialog yang meminta pengguna memasukkan angka. Angka yang dimasukkan akan disimpan di variabel angka.
-  int z = Integer.valueOf(angka).intValue(); //Mengonversi nilai yang ada di variabel angka yang berisi input pengguna dalam bentuk String menjadi tipe data int menggunakan Integer.valueOf(). 
-  
-  String hasil =""; //Deklarasi variabel hasil bertipe String yang akan digunakan untuk menyimpan hasil output.
-  
-  //Menggunakan pernyataan if-else untuk memeriksa apakah nilai z berada di antara 1 dan 10. Jika benar, "Valid number" akan ditambahkan ke variabel hasil. Jika tidak, "Invalid number" akan ditambahkan.
-  if (z>=1&&z<=10){
-   hasil += "Valid number";
-  }
-  else{
-   hasil += "Invalid Number";
-  }
- JOptionPane.showMessageDialog(null, hasil); //Menampilkan dialog pesan menggunakan JOptionPane.showMessageDialog dengan isi pesan yang berada dalam variabel hasil. Pesan tersebut akan muncul dalam dialog pop-up.
- }
-}
-
-6.5.2.2
+modul 7.7.1 Hari dalam Seminggu 
+modul 7.7.1 while loop
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas membacaBilanganSwitch6 berada dalam paket latihanmodul6.
 
 /**
  *
  * @author HP 840 G3
- */
-import javax.swing.JOptionPane; //Baris ini mengimpor kelas JOptionPane dari pustaka Swing. Kelas ini digunakan untuk membuat dialog input dan dialog pesan.
-public class membacaBilanganSwitch6 { //Deklarasi kelas membacaBilanganSwitch6 yang merupakan nama kelas utama dalam program.
-     public static void main(String[]args){ //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
-  String angka=""; //Deklarasi variabel angka bertipe String yang akan digunakan untuk menyimpan input pengguna. 
-  angka=JOptionPane.showInputDialog("Silahkan masukkan angka "); //Muncul dialog input menggunakan JOptionPane.showInputDialog yang meminta pengguna memasukkan angka. Angka yang dimasukkan akan disimpan di variabel angka.
-  int z = Integer.valueOf(angka).intValue(); //Mengonversi nilai yang ada di variabel angka yang berisi input pengguna dalam bentuk String menjadi tipe data int menggunakan Integer.valueOf().
- 
-  String hasil=""; //Deklarasi variabel hasil bertipe String yang akan digunakan untuk menyimpan hasil output.
-  
-  //Pernyataan switch digunakan untuk memeriksa nilai z dan mengevaluasi berbagai kasus. Jika nilai z cocok dengan salah satu kasus (1 hingga 10), maka hasil akan ditambahkan dengan "Valid Number". Jika tidak cocok dengan kasus apa pun, maka hasil akan ditambahkan dengan "Invalid Number". Pernyataan break digunakan untuk keluar dari pernyataan switch setelah sebuah kasus terpenuhi.
-  switch(z){
-  case 1: hasil+= "Valid Number"; break;
-  case 2: hasil+= "Valid Number"; break;
-  case 3: hasil+= "Valid Number"; break;
-  case 4: hasil+= "Valid Number"; break;
-  case 5: hasil+= "Valid Number"; break;
-  case 6: hasil+= "Valid Number"; break;
-  case 7: hasil+= "Valid Number"; break;
-  case 8: hasil+= "Valid Number"; break;
-  case 9: hasil+= "Valid Number"; break;
-  case 10: hasil+= "Valid Number"; break;
-  default: hasil+= "Invalid Number"; break;
-  }
- JOptionPane.showMessageDialog(null, hasil); //Menampilkan dialog pesan menggunakan JOptionPane.showMessageDialog dengan isi pesan yang berada dalam variabel hasil. Pesan tersebut akan muncul dalam dialog pop-up.
- }
-}
-
-
-modul 6.5.3 Cetak Seratus Kali
-
-modul 6.5.3 while loop
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas cetakWhileLoop6 berada dalam paket latihanmodul6.
-
-/**
- *
- * @author HP 840 G3
- */
-public class cetakWhileLoop6 { //Deklarasi kelas cetakWhileLoop6 yang merupakan nama kelas utama dalam program. 
-    public static void main(String args[]){ //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
-  int r=0; //Deklarasi variabel r bertipe int dan diinisialisasi dengan nilai 0. Variabel r akan digunakan sebagai penghitung untuk mengontrol perulangan.
-  
-  //Perulangan while digunakan untuk mencetak pesan "HAFIZHOH VIARMA" sebanyak 100 kali. Selama nilai variabel r kurang dari 100, blok pernyataan di dalam while akan dijalankan. Pada setiap iterasi perulangan, pesan akan dicetak menggunakan System.out.println("HAFIZHOH VIARMA"), dan nilai r akan ditingkatkan dengan r++ untuk menghindari perulangan yang tak terbatas. Setelah r mencapai atau melebihi 100, perulangan berhenti. Program ini akan mencetak pesan "HAFIZHOH VIARMA" sebanyak 100 kali secara berurutan dalam baris terpisah.
-  while (r<100){
-   System.out.println("HAFIZHOH VIARMA");
-   r++;
-  }
- }
-} 
-
-modul 6.5.3 do while
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas cetakDoWhile6 berada dalam paket latihanmodul6.
-
-/**
- *
- * @author HP 840 G3
- */
-public class cetakDoWhile6 { //Deklarasi kelas cetakDoWhile6 yang merupakan nama kelas utama dalam program.
-    public static void main(String args[]){ //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
- int r = 0; //Deklarasi variabel r bertipe int dan diinisialisasi dengan nilai 0. Variabel r akan digunakan sebagai penghitung untuk mengontrol perulangan.
- 
- //Perulangan do-while digunakan untuk mencetak pesan "HAFIZHOH VIARMA" sebanyak 100 kali. Blok pernyataan di dalam do akan dieksekusi terlebih dahulu, kemudian kondisi while akan dievaluasi. Selama kondisi r<100 terpenuhi, perulangan akan berlanjut. Pada setiap iterasi perulangan, pesan akan dicetak menggunakan System.out.println("HAFIZHOH VIARMA"), dan nilai r akan ditingkatkan dengan r++ untuk menghindari perulangan yang tak terbatas. Setelah r mencapai atau melebihi 100, perulangan berhenti.
-
-Program ini akan mencetak pesan "HAFIZHOH VIARMA" sebanyak 100 kali secara berurutan dalam baris terpisah. Perbedaan utama antara do-while dan while adalah bahwa do-while akan menjalankan blok pernyataan setidaknya satu kali, bahkan jika kondisi awalnya tidak terpenuhi.
-
- do {
-  System.out.println("HAFIZHOH VIARMA");
-  r++;
-  } while (r<100);
- }
-}
-
-modul 6.5.3 for loop
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas cetakForLoop6 berada dalam paket latihanmodul6.
-
-/**
- *
- * @author HP 840 G3
- */
-public class cetakForLoop6 { //Deklarasi kelas cetakForLoop6 yang merupakan nama kelas utama dalam program.
-    public static void main(String args[]){ //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
- int r; //Deklarasi variabel r bertipe int. Variabel r akan digunakan sebagai penghitung untuk mengontrol perulangan.
- 
- //Perulangan for digunakan untuk mencetak pesan "HAFIZHOH VIARMA" sebanyak 100 kali. Pada awal perulangan, r diinisialisasi dengan nilai 0. Selama kondisi r<100 terpenuhi, perulangan akan terus berlanjut. Pada setiap iterasi perulangan, pesan akan dicetak menggunakan System.out.println("HAFIZHOH VIARMA"), dan nilai r akan ditingkatkan dengan r++. Setelah r mencapai atau melebihi 100, perulangan berhenti.
-
-Program ini akan mencetak pesan "HAFIZHOH VIARMA" sebanyak 100 kali secara berurutan dalam baris terpisah. Perulangan for memungkinkan untuk mengatur penghitung, kondisi perulangan, dan langkah iterasi dalam satu baris pernyataan.
- for (r=0; r<100; r++){
- System.out.println("HAFIZHOH VIARMA"); 
- }
- }
-}
-
-
-modul 6.5.4 Perpangkatan 
-
-6.5.4 while loop
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas pangkatWhileLoop6 berada dalam paket latihanmodul6.
-
-/**
- *
- * @author HP 840 G3
- */
-import java.io.*; //Baris ini mengimpor paket java.io yang berisi kelas-kelas yang digunakan untuk operasi input-output.
-
-public class pangkatWhileLoop6 { //Deklarasi kelas pangkatWhileLoop6 yang merupakan nama kelas utama dalam program.
-    public static void main (String [] args) //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
-    {
-        BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in)); //Baris ini membuat objek BufferedReader untuk membaca input dari pengguna. Objek tersebut menggunakan System.in sebagai sumber input.
-        int nilai,pangkat,hasil,i; //Deklarasi variabel nilai, pangkat, hasil, dan i bertipe int. Variabel-variabel ini akan digunakan dalam proses perhitungan pangkat.
+ */   //Komentar yang memberikan informasi tentang lisensi dan template yang digunakan untuk kelas ini. 
+public class latihan1WhileLoop {  //Deklarasi kelas "latihan1WhileLoop" yang berisi method "main". Method "main" adalah titik awal eksekusi program. 
+    public static void main (String[] args){
+        String[] hari = { //Deklarasi dan inisialisasi array "hari" yang berisi nama-nama hari dalam bahasa Indonesia.
+            "senin","selasa","rabu","kamis","jumat","sabtu","minggu"
+        };
         
-        //Kode dalam blok try digunakan untuk menangani input-output dan pemrosesan angka. Jika terjadi IOException (kesalahan input-output), blok catch akan menangkapnya dan mencetak pesan "error".
-        try{
-        //Baris ini meminta pengguna untuk memasukkan angka dan pangkat yang akan dihitung. Input dari pengguna kemudian dibaca menggunakan readLine() dan diubah menjadi tipe data int menggunakan Integer.parseInt().
-            System.out.print("masukan angka : ");
-            nilai = Integer.parseInt(dataIn.readLine());
-            System.out.print("masukan pangkat : ");
-            pangkat = Integer.parseInt(dataIn.readLine());
-            
-          hasil =1;
-          i=1;
-          
-          //Perulangan while digunakan untuk menghitung pangkat angka. Pada setiap iterasi perulangan, variabel hasil akan dikalikan dengan nilai, kemudian nilai hasil akan dicetak. Penghitungan dilakukan sebanyak pangkat kali dengan menggunakan variabel i sebagai penghitung. Setelah i mencapai atau melebihi pangkat, perulangan berhenti.
-Program ini akan meminta pengguna untuk memasukkan angka dan pangkat. Setelah itu, program akan menghitung dan mencetak hasil pangkat angka sebanyak pangkat kali.
-          while (i <= pangkat){
-            hasil = hasil * nilai;
-            System.out.println("hasil = "+hasil);
-            i++;
-          }
-        
-        }catch(IOException e){
-            System.out.println("error");
+        int i=0; //Deklarasi variabel "i" dengan nilai awal 0.
+        while(i<hari.length) //Perulangan while yang akan terus berjalan selama nilai "i" kurang dari panjang array "hari".
+        {
+            System.out.println(hari[i]); //Mencetak elemen array "hari" pada indeks "i".
+            i++; //Meningkatkan nilai "i" sebesar 1.
         }
-    
     }
 }
 
-6.5.4 do while
+modul 7.7.1 do while
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas pangkatDoWhile6 berada dalam paket latihanmodul6.
 
 /**
  *
  * @author HP 840 G3
- */
-import java.io.*; //Baris ini mengimpor paket java.io yang berisi kelas-kelas yang digunakan untuk operasi input-output.
-public class pangkatDoWhile6 { //Deklarasi kelas pangkatDoWhile6 yang merupakan nama kelas utama dalam program.
-    public static void main (String [] args) //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan. 
-    {
-        BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in)); //Baris ini membuat objek BufferedReader untuk membaca input dari pengguna. Objek tersebut menggunakan System.in sebagai sumber input.
-        int nilai,pangkat,hasil,i; //Deklarasi variabel nilai, pangkat, hasil, dan i bertipe int. Variabel-variabel ini akan digunakan dalam proses perhitungan pangkat.
-        
-        try{ //Kode dalam blok try digunakan untuk menangani input-output dan pemrosesan angka. Jika terjadi IOException (kesalahan input-output), blok catch akan menangkapnya dan mencetak pesan "error".
-        ///Baris ini meminta pengguna untuk memasukkan angka dan pangkat yang akan dihitung. Input dari pengguna kemudian dibaca menggunakan readLine() dan diubah menjadi tipe data int menggunakan Integer.parseInt().
-            System.out.print("masukan angka : ");
-            nilai = Integer.parseInt(dataIn.readLine());
-            System.out.print("masukan pangkat : ");
-            pangkat = Integer.parseInt(dataIn.readLine());
-            
-          //Perulangan do-while digunakan untuk menghitung pangkat angka. Pada setiap iterasi perulangan, variabel hasil akan dikalikan dengan nilai, kemudian nilai hasil akan dicetak. Penghitungan dilakukan sebanyak pangkat kali dengan menggunakan variabel i sebagai penghitung. Perulangan dilanjutkan selama i kurang dari atau sama dengan pangkat.  
-          hasil =1;
-          i=1;
-          do
-          {
-              hasil = hasil * nilai;
-              System.out.println("hasil =" + hasil);
-              i++;
-          }while (i<=pangkat);
-          
-        
-        }catch(IOException e){ 
-            System.out.println("error");
-        }
-        //Jika terjadi kesalahan saat membaca input, pesan "error" akan dicetak.
-
-Kode tersebut menghasilkan hasil perhitungan pangkat dari angka yang dimasukkan oleh pengguna.
+ */  //Komentar yang memberikan informasi tentang lisensi dan template yang digunakan untuk kelas ini. 
+public class latihan1doWhile { //Komentar yang menyatakan penulis dari kelas ini.
+    public static void main(String[] args){ //Deklarasi kelas "latihan1doWhile" yang berisi method "main". Method "main" adalah titik awal eksekusi program.
+        String hari[] = { //Deklarasi dan inisialisasi array "hari" yang berisi nama-nama hari dalam bahasa Indonesia.
+            "senin","selasa","rabu","kamis","jumat","sabtu","minggu"
+        }; 
+        int i=0; //Deklarasi variabel "i" dengan nilai awal 0.
+        do //Perulangan do-while yang akan melakukan hal berikut:
+            {
+                System.out.println(hari[i]);  //Mencetak elemen array "hari" pada indeks "i".
+                i++; //Meningkatkan nilai "i" sebesar 1.
+            }while(i<hari.length); //Kondisi perulangan do-while. Perulangan akan terus berjalan selama nilai "i" kurang dari panjang array "hari".
     }
 }
 
-
-6.5.4 for loop
+modul 7.7.1 for
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package latihanmodul6; //Baris ini menentukan paket tempat kelas berada. Dalam contoh ini, kelas pangkatForLoop6 berada dalam paket latihanmodul6.
 
 /**
  *
  * @author HP 840 G3
- */
-import java.io.*; //Baris ini mengimpor paket java.io yang berisi kelas-kelas yang digunakan untuk operasi input-output.
-public class pangkatForLoop6 { //Deklarasi kelas pangkatForLoop6 yang merupakan nama kelas utama dalam program.
-     public static void main (String [] args) //Metode main merupakan metode utama yang akan dieksekusi saat program dijalankan.
+ */ //Komentar yang memberikan informasi tentang lisensi dan template yang digunakan untuk kelas ini.
+public class latihan1For { //Komentar yang menyatakan penulis dari kelas ini.
+    public static void main(String[]args) //Deklarasi kelas "latihan1For" yang berisi method "main". Method "main" adalah titik awal eksekusi program. 
     {
-        BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in)); //Baris ini membuat objek BufferedReader untuk membaca input dari pengguna. Objek tersebut menggunakan System.in sebagai sumber input.
-        int nilai,pangkat,hasil,i;  //Deklarasi variabel nilai, pangkat, hasil, dan i bertipe int. Variabel-variabel ini akan digunakan dalam proses perhitungan pangkat.
-        
-        try{ //Kode dalam blok try digunakan untuk menangani input-output dan pemrosesan angka. Jika terjadi IOException (kesalahan input-output), blok catch akan menangkapnya dan mencetak pesan "error".
-            System.out.print("masukan angka : ");
-            nilai = Integer.parseInt(dataIn.readLine());
-            System.out.print("masukan pangkat : ");
-            pangkat = Integer.parseInt(dataIn.readLine()); //Baris ini meminta pengguna untuk memasukkan angka dan pangkat yang akan dihitung. Input dari pengguna kemudian dibaca menggunakan readLine() dan diubah menjadi tipe data int menggunakan Integer.parseInt().
-            
-          //Perulangan for digunakan untuk menghitung pangkat angka. Variabel i dimulai dari 1 dan terus bertambah hingga mencapai pangkat. Pada setiap iterasi perulangan, variabel hasil akan dikalikan dengan nilai, kemudian nilai hasil akan dicetak.  
-          hasil=1;
-          for (i=1; i<=pangkat; i++){
-              hasil= hasil * nilai;
-              System.out.println("hasil = "+ hasil);
-          }
-        
-        }catch(IOException e){
-            System.out.println("error");
-        }
-    //Jika terjadi kesalahan saat membaca input, pesan "error" akan dicetak.
-
-Kode tersebut menghasilkan hasil perhitungan pangkat dari angka yang dimasukkan oleh pengguna menggunakan perulangan for.
+        String[] hari = { "Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"}; // Deklarasi dan inisialisasi array "hari" yang berisi nama-nama hari dalam bahasa Indonesia.
+        for(int i=0;i<hari.length;i++) //Perulangan for yang memiliki tiga bagian: inisialisasi (int i=0), kondisi perulangan (i<hari.length), dan ekspresi iterasi (i++).
+            {
+                System.out.println(hari[i]); // Mencetak elemen array "hari" pada indeks "i".
+                ;
+            } //Tutup kurung kurawal untuk menandai akhir blok perulangan.
     }
+} //Hasil output program ini adalah mencetak nama-nama hari dalam bahasa Indonesia.
+
+modul 7.7.2 Nomor Terbesar
+
+ **Buffered Reader**
+ 
+ /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+//Komentar yang memberikan informasi tentang lisensi dan template yang digunakan untuk kelas ini.
+/**
+ *
+ * @author HP  840 G3 //Komentar yang menyatakan penulis dari kelas ini.
+ */  
+import java.io.BufferedReader; //Mengimpor kelas BufferedReader dari paket java.io yang digunakan untuk membaca input dari pengguna.
+import java.io.InputStreamReader; //Mengimpor kelas InputStreamReader dari paket java.io yang digunakan untuk mengonversi input stream ke karakter.
+public class latihan2BufferedReader {
+    public static void main(String[] args){ //Deklarasi kelas latihan2BufferedReader yang berisi method main. Method main adalah titik awal eksekusi program. 
+        BufferedReader masukan=new BufferedReader(new InputStreamReader(System.in)); //Membuat objek BufferedReader dengan menginisialisasinya menggunakan objek InputStreamReader yang mengambil input dari System.in.
+         int data[]=new int[10]; //Membuat array data dengan panjang 10 untuk menyimpan data yang dimasukkan oleh pengguna.
+        String input=""; //Mendeklarasikan variabel input dengan tipe data String dan menginisialisasinya dengan string kosong.
+            for (int i=0;i<data.length;i++){ //Perulangan for untuk meminta pengguna memasukkan data sebanyak 10 kali.
+                System.out.print("masukan data ke "+(i+1)+":"); //Mencetak pesan permintaan input kepada pengguna.
+            try{
+                input=masukan.readLine(); 
+                //Menggunakan BufferedReader untuk membaca input dari pengguna dan mengubahnya menjadi tipe data int. 
+                //Nilai yang dimasukkan kemudian disimpan di dalam array data pada indeks yang sesuai.
+                data[i]=Integer.parseInt(input);
+            }catch (Exception e){              
+                } ////Menangani eksepsi yang terjadi jika terjadi kesalahan saat membaca input dari pengguna.
+            }
+            int terbesar =data[0];
+            for (int i=0;i<data.length;i++){ //Perulangan for untuk mencari nilai terbesar dalam array data.
+                if(data[i]>terbesar){ //Membandingkan nilai di dalam array dengan nilai terbesar saat ini. Jika nilai di dalam array lebih besar, maka nilai terbesar diubah menjadi nilai tersebut.
+                    terbesar=data[i];
+                }
+                }
+            System.out.println(""); 
+            System.out.println("input terbesar adalah:"+terbesar); //Mencetak nilai terbesar yang ditemukan.
+}
+}
+
+**JOption Pane**
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+// Komentar yang memberikan informasi tentang lisensi dan template yang digunakan untuk kelas ini.
+/**
+ * 
+ * @author HP 840 G3 //Komentar yang menyatakan penulis dari kelas ini.
+ */
+import javax.swing.JOptionPane; //Mengimpor kelas JOptionPane dari paket javax.swing yang digunakan untuk menampilkan dialog box untuk menerima input dan menampilkan pesan kepada pengguna.
+public class latihan2JOptionPane { //Deklarasi kelas latihan2JOptionPane yang berisi method main. Method main adalah titik awal eksekusi program. 
+    public static void main(String[] args){
+   int[] a = new int[11]; //Mendeklarasikan array a dan n dengan panjang 11 untuk menyimpan data yang dimasukkan oleh pengguna.
+
+        String[] n = new String[11]; //Mendeklarasikan variabel terbesar dengan nilai awal 0 untuk menyimpan nilai terbesar.
+
+        int terbesar = 0;
+
+        for(int i=1;i+1<=a.length;i++) //Perulangan for untuk meminta pengguna memasukkan data sebanyak 11 kali.
+
+        {
+            //Mencetak nomor array yang sedang dimasukkan.
+            System.out.println(i); //menampilkan array ke
+
+            n[i] = JOptionPane.showInputDialog("Masukkan angka ke-"+i+" :"); //Menampilkan dialog box JOptionPane untuk meminta pengguna memasukkan angka.
+
+            a[i] = Integer.parseInt(n[i]); //Mengonversi angka yang dimasukkan oleh pengguna menjadi tipe data int dan menyimpannya di dalam array a pada indeks yang sesuai.
+            //Memeriksa apakah nilai terbesar saat ini lebih besar daripada nilai yang baru saja dimasukkan oleh pengguna. Jika iya, maka nilai terbesar tetap tidak berubah dan dicetak di command line.
+            if(terbesar>a[i])
+
+            {
+
+                if(terbesar>a[i])
+
+                {
+
+                terbesar=terbesar;
+               
+                System.out.println(terbesar); //menampilkan terbesar dicommandline
+
+                }
+
+            }
+
+            else
+
+            {
+
+                if(a[i]>a[i-1])
+
+                {
+
+                terbesar=a[i];
+
+                }
+
+                else
+
+                {
+
+                terbesar=a[i-1];
+                
+// Jika nilai yang baru saja dimasukkan oleh pengguna lebih besar dari nilai sebelumnya dalam array, maka nilai terbesar diubah menjadi nilai tersebut. Jika tidak, nilai terbesar tetap sama dengan nilai sebelumnya dalam array. Nilai terbesar kemudian dicetak di command line.
+
+                }
+
+                System.out.println(terbesar); //menampilkan terbesar di commandline
+
+            }
+
+        }
+        //Membuat string hasil yang berisi pesan yang mengandung nilai terbesar yang ditemukan.
+        String hasil="Nilai Terbesar adalah "+terbesar;
+        //Menampilkan dialog box JOptionPane yang menampilkan pesan hasil.
+        JOptionPane.showMessageDialog(null,hasil);           
+
+    }
+
+}
+
+modul 7.7.3 Buku Alamat
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+// Komentar yang memberikan informasi tentang lisensi dan template yang digunakan untuk kelas ini.
+/**
+ *
+ * @author HP 840 G3 /Komentar yang menyatakan penulis dari kelas ini.
+ */
+public class latihan3 { //Deklarasi kelas "latihan3" yang berisi method "main". Method "main" adalah titik awal eksekusi program. 
+    public static void main(String[] args) {
+    //Deklarasi dan inisialisasi array dua dimensi "alamat" yang menyimpan informasi nama, nomor telepon, dan alamat beberapa orang.
+     String alamat[][] = {{"Florence", "735-1234", "Manila"}, {"Joyce", "983-3333", "Quezon City"},{"Becca", "456-3322", "Manila"}};
+int i=0; //Deklarasi variabel "i" dengan nilai awal 0.
+do{
+//Mencetak informasi nama, nomor telepon, dan alamat orang yang terdapat dalam array "alamat" pada indeks "i".
+System.out.println("name    :" + alamat[i][0] ); //
+System.out.println("Tel. #  :" + alamat[i][1] );
+System.out.println("Address :" + alamat[i][2] );
+System.out.println(" "); //Mencetak baris kosong untuk pemisah.
+i++; //Meningkatkan nilai "i" sebesar 1.
+}
+while (i<3); //Kondisi perulangan do-while. Perulangan akan terus berjalan selama nilai "i" kurang dari 3.
+}
 }
