@@ -1,234 +1,140 @@
-modul 10 
-BUKU ALAMAT
+MODUL 11
 
+CIRCLE.JAVA
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */ //komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.
+package AbstractClass; //menentukan package di mana kelas Circle akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
+
+/**
+ *
+ * @author HP 840 G3 //adalah komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.     
+ */
+public class Circle { //mendeklarasikan kelas Circle. Kelas ini mewakili sebuah lingkaran dan memiliki beberapa metode yang mengembalikan informasi tentang lingkaran tersebut.
+     private double radius; /mendeklarasikan variabel instance "radius" yang bertipe data double. Variabel ini digunakan untuk menyimpan nilai jari-jari lingkaran.
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+   //kode diatas adalah konstruktor kelas Circle. Konstruktor ini menerima argumen "radius" dan menginisialisasi variabel instance "radius" dengan nilai yang diberikan.
+
+    public double getArea() {
+        return 3.14 * radius * radius;
+    }
+   //Kode di atas adalah metode "getArea" yang mengembalikan luas lingkaran. Rumus yang digunakan untuk menghitung luas lingkaran adalah π * r^2, di mana π (pi) adalah konstanta yang diwakili oleh nilai 3.14 dan r adalah jari-jari lingkaran.
+
+    public String getName() {
+        return "Circle";
+    }
+   //Kode di atas adalah metode "getName" yang mengembalikan nama lingkaran. Dalam hal ini, nama lingkaran adalah "Circle". Metode ini digunakan untuk mendapatkan informasi tentang jenis bentuk geometri yang diwakili oleh objek Circle.
+}
+
+MAIN.JAVA
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */ //Kode di atas adalah komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.
-
-package HafizhohViarma_05Mei2023; //Kode ini menentukan package di mana kelas BukuAlamat akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
-
-/**
- *
- * @author HP 840 G3
- */
-public class BukuAlamat { //Kode di atas mendeklarasikan kelas BukuAlamat. Kelas ini memiliki beberapa variabel anggota dan metode.
-
-    /Kode di bawah mendeklarasikan empat variabel anggota dengan tipe data String: nama, alamat, nomor, dan email. Variabel-variabel ini akan menyimpan informasi tentang buku alamat.
-    private String nama;
-    private String alamat;
-    private String nomor;
-    private String email;
-    
-    private static int bukuAlamatTambah; //mendeklarasikan variabel statis dengan tipe data int bernama "bukuAlamatTambah". Variabel ini digunakan untuk menghitung jumlah objek BukuAlamat yang telah dibuat.
-    
-    public BukuAlamat(){ 
-    bukuAlamatTambah++;
-    } ////konstruktor default kelas BukuAlamat. Konstruktor ini akan dieksekusi setiap kali objek BukuAlamat dibuat. Di dalam konstruktor ini, variabel "bukuAlamatTambah" akan bertambah satu.
-    
-//    cara 2
-//    public bukuAlamat(String nama, String alamat, String nomor, String email){
-//        this.nama = nama;
-//        this.alamat = alamat;
-//        this.nomor = nomor;
-//        this.email = email;
-//        bukuAlamatTambah++;
-//    }
-    
-//    public bukuAlamat(String nama, String alamat, String nomor, String email){
-//        this.nama = nama; 
-//        this.alamat = alamat; 
-//        this.nomor = nomor;
-//        this.email = email;
-//        bukuAlamatTambah++;
-//    }
-    
-    //cara 3
-//    public void print(String temp){
-//        System.out.println("nama :"+nama);
-//        System.out.println("alamat : "+alamat);
-//        System.out.println("nomor telepon : "+nomor);
-//        System.out.println("email : "+email);
-//        bukuAlamatTambah++;
-//    }
-//    
-    
-
-    contoh dari getter dan setter. Getter digunakan untuk mengambil nilai dari variabel nama, sedangkan setter digunakan untuk mengatur nilai variabel nama.
-    //cara 1
-    public String getNama(){
-        return nama;
-    }
-    public void setNama(String nama){
-        this.nama = nama;
-    }
-    
-    public String getAlamat(){
-        return alamat;
-    }
-    public void setAlamat(String alamat){
-        this.alamat = alamat;
-    }
-    
-    public String getNomor(){
-        return nomor;
-    }
-    public void setNomor(String nomor){
-        this.nomor = nomor;
-    }
-    
-    public String getEmail(){
-        return email;
-    }
-    public void setEmail(String email){
-        this.email = email;
-    }
-    
-    
-}
-
-DATA BUKU ALAMAT
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */ //komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.
-package HafizhohViarma_05Mei2023; //menentukan package di mana kelas DataBukuAlamat akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
+package AbstractClass; //menentukan package di mana kelas Main akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
 
 /**
  *
  * @author HP 840 G3 //komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.
  */
-public class DataBukuAlamat { //mendeklarasikan kelas DataBukuAlamat. Kelas ini memiliki beberapa variabel anggota dan metode.
+public class Main { //mendeklarasikan kelas Main. Kelas ini berfungsi sebagai kelas utama (entry point) yang akan dieksekusi saat program dijalankan.
 
-    private BukuAlamat[] data = new BukuAlamat[100]; 
-    private int index;
-    //mendeklarasikan dua variabel anggota: "data" yang merupakan array objek BukuAlamat dengan panjang 100, dan "index" yang merupakan indeks saat ini di dalam array data.
-   
-    public void update(int index, BukuAlamat buku){
-        data[index] = buku;
-    }
-   /Kode di atas adalah sebuah metode "update" yang menerima indeks dan objek BukuAlamat sebagai parameter. Metode ini digunakan untuk mengubah objek BukuAlamat pada indeks yang ditentukan dengan objek BukuAlamat baru.
-    
-    public void insert(BukuAlamat buku){
-        data[index] = buku;
-        index++;
-//Kode di atas adalah metode "insert" yang menerima objek BukuAlamat sebagai parameter. Metode ini digunakan untuk menyisipkan objek BukuAlamat ke dalam array data pada indeks yang saat ini ditunjukkan oleh variabel "index", kemudian meningkatkan nilai "index" dengan 1.    }
+//Kode di bawah adalah metode main yang merupakan titik masuk (entry point) program. Ketika program dijalankan, metode main akan dieksekusi. Di dalam metode main, terdapat beberapa baris kode yang membuat objek Circle dan Square, dan kemudian mencetak informasi tentang luas kedua bentuk geometri tersebut.
+     public static void main(String[] args) {
+        Circle circle = new Circle(10); //membuat objek Circle baru dengan jari-jari 10. Objek ini akan digunakan untuk menghitung luas lingkaran.
+        System.out.println("Area of " + circle.getName() + ": " + circle.getArea()); //mencetak informasi tentang lingkaran, yaitu nama lingkaran (didapatkan melalui metode getName) dan luas lingkaran (didapatkan melalui metode getArea).
 
-    public BukuAlamat[] getAll(){
-        BukuAlamat[] temp = new BukuAlamat[index];
-        for(int i=0;i<index;i++){
-            temp[i]=data[i];
-        }
-        return data;
-    }
-   //Kode di atas adalah metode "getAll" yang mengembalikan array objek BukuAlamat yang berisi semua objek BukuAlamat yang ada dalam array data. Metode ini membuat array baru dengan panjang sesuai dengan nilai "index", kemudian menyalin semua objek BukuAlamat dari array data ke array baru, dan mengembalikan array baru tersebut.
-   
-    
-    public void delete(int index){
-        data[index].setNama("");
-        data[index].setAlamat("");
-        data[index].setNomor("");
-        data[index].setEmail("");
-    }
-   //Kode di atas adalah metode "delete" yang menerima indeks sebagai parameter. Metode ini digunakan untuk menghapus objek BukuAlamat pada indeks yang ditentukan dengan mengatur nilai nama, alamat, nomor, dan email objek tersebut menjadi string kosong.
-   
-//Kode dibawah adalah metode "main" yang merupakan titik masuk utama program. Di dalam metode ini, beberapa objek BukuAlamat dibuat, diatur nilainya, dan dimasukkan ke dalam objek DataBukuAlamat. Kemudian, daftar objek BukuAlamat yang ada dalam objek DataBukuAlamat ditampilkan ke layar dengan menggunakan metode getAll.
-    public static void main(String[] args){
-        DataBukuAlamat data = new DataBukuAlamat();
-        BukuAlamat temp = new BukuAlamat();
-        temp.setNama("ali");
-        temp.setAlamat("pasar");
-        temp.setNomor("0812345678");
-        temp.setEmail("daging99@gamil.com");
-        data.insert(temp);
-        
-        BukuAlamat temp2 = new BukuAlamat();
-        temp2.setNama("ani");
-        temp2.setAlamat("padang");
-        temp2.setNomor("0898765432");
-        temp2.setEmail("rahamnilai765@gmail.com");
-        data.insert(temp2);
-        
-        //tampil
-        BukuAlamat[] list = data.getAll();
-        for(int i=0;i<list.length;i++){
-            System.out.println("buku alamat ke---> "+(i+1));
-            System.out.println("nama            :"+list[i].getNama());
-            System.out.println("alamat          :"+list[i].getAlamat());
-            System.out.println("nomor telepon   :"+list[i].getNomor());
-            System.out.println("email         : "+list[i].getEmail());
-                    
-        }
+        Square square = new Square(5); /membuat objek Square baru dengan panjang sisi 5. Objek ini akan digunakan untuk menghitung luas persegi.
+        System.out.println("Area of " + square.getName() + ": " + square.getArea()); //mencetak informasi tentang persegi, yaitu nama persegi (didapatkan melalui metode getName) dan luas persegi (didapatkan melalui metode getArea).
     }
 }
 
-MENU BUKU ALAMAT
+SHAPE.JAVA
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */ //komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.
-package HafizhohViarma_05Mei2023;  //menentukan package di mana kelas MenuBukuAlamat akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
+package AbstractClass; /menentukan package di mana kelas-kelas berikutnya akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
 
 /**
  *
  * @author HP 840 G3 //komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.
- */
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-//Kode di atas adalah import statement yang digunakan untuk mengimpor kelas-kelas yang diperlukan dari pustaka Java. Dalam kasus ini, kelas BufferedReader dan InputStreamReader digunakan untuk membaca input dari pengguna.
 
-public class MenuBukuAlamat { //Kode di atas mendeklarasikan kelas MenuBukuAlamat. Kelas ini memiliki metode utama (main) yang akan dieksekusi saat program dijalankan.
+//mendefinisikan kelas abstrak "Shape". Kelas ini memiliki dua metode abstrak, yaitu "getArea()" yang mengembalikan luas bentuk geometri dan "getName()" yang mengembalikan nama bentuk geometri. Kelas ini tidak dapat diinstansiasi langsung karena merupakan kelas abstrak.
+abstract class Shape {
+    public abstract double getArea();
+    public abstract String getName();
+}
 
-//Kode di bawah adalah metode "main" yang merupakan titik masuk utama program. Di dalam metode ini, kita membaca input dari pengguna menggunakan kelas BufferedReader dan InputStreamReader. Selanjutnya, kita membuat objek DataBukuAlamat dan menginisialisasi variabel "pil" dengan 0.
-    public static void main(String[] args) {
-        BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in));
-        DataBukuAlamat data = new DataBukuAlamat();
-        int pil=0;
+//mendefinisikan kelas "Circle" yang mewarisi kelas "Shape". Kelas ini memiliki variabel instance "radius" yang digunakan untuk menyimpan nilai jari-jari lingkaran. Kelas ini mengimplementasikan metode-metode abstrak dari kelas "Shape", yaitu "getArea()" untuk menghitung luas lingkaran dan "getName()" untuk mengembalikan nama lingkaran.
+class Circle extends Shape {
+    private double radius;
 
-        //blok try-catch yang digunakan untuk menangani pengecualian (exception) yang mungkin terjadi dalam blok try. Namun, dalam kode yang diberikan, blok catch tidak melakukan apa pun.
-        try {
-            
-            while(pil!=5){ //perulangan while yang akan terus berjalan selama nilai variabel "pil" tidak sama dengan 5. Dalam setiap iterasi perulangan, menu akan ditampilkan ke pengguna dan input pengguna akan dibaca untuk menentukan tindakan yang diambil.
-                System.out.println("1.Input Data");
-                System.out.println("2.Hapus Data");
-                System.out.println("3.Update Data");
-                System.out.println("4.Tampilkan");
-                System.out.println("5.Keluar");
-                System.out.print("Pilihan Anda ?");
-                pil =Integer.parseInt(dataIn.readLine());
-                switch(pil){ / switch case yang digunakan untuk memilih tindakan berdasarkan nilai variabel "pil". Dalam kode yang diberikan, hanya kasus 1 dan kasus 4 yang ditangani.
-                    case 1:
-                        BukuAlamat temp = new BukuAlamat();
-                        System.out.print("Nama      :");
-                        temp.setNama(dataIn.readLine());
-                        System.out.print("Alamat    :");
-                        temp.setAlamat(dataIn.readLine());
-                        System.out.print("No Telp   :");
-                        temp.setNotelp(dataIn.readLine());
-                        System.out.print("Email     :");
-                        temp.setEmail(dataIn.readLine());
-                        data.insert(temp); 
-                        break; 
-                   //Kode di atas adalah kasus 1 dalam switch case. Jika pengguna memilih pilihan 1, maka akan diminta untuk memasukkan data seperti nama, alamat, nomor telepon, dan email. Objek BukuAlamat baru akan dibuat dan diisi dengan data yang dimasukkan oleh pengguna. Kemudian, objek tersebut akan dimasukkan ke dalam objek DataBukuAlamat menggunakan metode insert.
-                    case 4:
-                        BukuAlamat[] list = data.getAll();
-                        for(int i=0;i<list.length;i++){
-                            System.out.println("Buku Alamat ke--->"+(i+1));
-                            System.out.println("Nama    :"+list[i].getNama());
-                            System.out.println("Alamat  :"+list[i].getAlamat());
-                            System.out.println("No Telp :"+list[i].getNotelp());
-                            System.out.println("Email   :"+list[i].getEmail());
-                        }
-                        break;
-//Kode di atas adalah kasus 4 dalam switch case. Jika pengguna memilih pilihan 4, maka akan ditampilkan daftar objek BukuAlamat yang ada dalam objek DataBukuAlamat. Objek DataBukuAlamat akan menggunakan metode getAll untuk mendapatkan array dari semua objek BukuAlamat, dan kemudian data dari setiap objek BukuAlamat akan ditampilkan ke layar.    
-                        
-                }
-            }
+    public Circle(double radius) {
+        this.radius = radius;
+    }
 
-        } catch (Exception ex) {
+    public double getArea() {
+        return 3.14 * radius * radius;
+    }
 
-        }
-    }
+    public String getName() {
+        return "Circle";
+    }
+}
+
+//mendefinisikan kelas "Square" yang mewarisi kelas "Shape". Kelas ini memiliki variabel instance "side" yang digunakan untuk menyimpan nilai panjang sisi persegi. Kelas ini mengimplementasikan metode-metode abstrak dari kelas "Shape", yaitu "getArea()" untuk menghitung luas persegi dan "getName()" untuk mengembalikan nama persegi.
+
+//Dengan menggunakan konsep abstraksi dan pewarisan, kita dapat membuat berbagai bentuk geometri yang berbeda dengan menggunakan kelas abstrak "Shape" sebagai kerangka dasar, dan kemudian meneruskannya ke kelas turunan seperti "Circle" dan "Square" untuk mengimplementasikan fungsionalitas khusus dari masing-masing bentuk geometri tersebut.
+class Square extends Shape {
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
+    }
+
+    public double getArea() {
+        return side * side;
+    }
+
+    public String getName() {
+        return "Square";
+    }
+}
+
+SQUARE.JAVA
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */ / komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini. 
+package AbstractClass; //menentukan package di mana kelas "Square" akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
+
+/**
+ *
+ * @author HP 840 G3 //komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.
+
+//mendefinisikan kelas "Square". Kelas ini memiliki variabel instance "side" yang digunakan untuk menyimpan nilai panjang sisi persegi. Kelas ini memiliki konstruktor untuk menginisialisasi nilai sisi saat objek dibuat. Selain itu, kelas ini memiliki dua metode, yaitu "getArea()" untuk menghitung luas persegi berdasarkan nilai sisi dan "getName()" untuk mengembalikan nama "Square".
+
+//Perbedaan utama antara kelas "Square" ini dengan kelas "Square" yang ada pada kode sebelumnya adalah bahwa kelas "Square" yang ini tidak mewarisi kelas abstrak "Shape". Oleh karena itu, kelas "Square" ini tidak terkait dengan konsep abstraksi dan pewarisan yang ada pada kode sebelumnya.
+public class Square {
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
+    }
+
+    public double getArea() {
+        return side * side;
+    }
+
+    public String getName() {
+        return "Square";
+    }
 }
