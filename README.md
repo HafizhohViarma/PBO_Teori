@@ -1,256 +1,155 @@
-MODUL 11
+README 23 Juni 2023
 
-PERSON
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */ //komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.     
-package Extend.M11; /menentukan package di mana kelas "Person" akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
-
-/**
- *
- * @author HP 840 G3 // komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.
-
-//mendefinisikan kelas "Person". Kelas ini memiliki dua variabel instance, yaitu "name" dan "address", yang digunakan untuk menyimpan informasi nama dan alamat seseorang. Kelas ini memiliki dua konstruktor, yaitu konstruktor default tanpa parameter yang menginisialisasi nilai "name" dan "address" menjadi string kosong, dan konstruktor dengan parameter yang digunakan untuk menginisialisasi nilai "name" dan "address" dengan nilai yang diberikan.
-
-//Kelas "Person" juga memiliki beberapa metode, antara lain:
-
-//getName(): Metode ini mengembalikan nilai dari variabel "name" dan mencetak pesan "Parent: getName" ke konsol.
-//getAddress(): Metode ini mengembalikan nilai dari variabel "address".
-//setName(String name): Metode ini mengatur nilai variabel "name" dengan nilai yang diberikan.
-//setAddress(String add): Metode ini mengatur nilai variabel "address" dengan nilai yang diberikan.
-
-
-public class Person {
-    
-    protected String name;
-    protected String address;
-    
-    public Person(){
-        System.out.println("Inside person:Constructor");
-        name = "";
-        address = "";
-        }
-
-        
-        public Person( String name, String address ){
-        this.name = name;
-        this.address = address;
-        }
-
-        
-        public String getName(){  //fnal berarti tidak boleh override di student
-        System.out.println("Parent: getName"); 
-        return name;
-        }
-
-        public String getAddress(){
-        return address;
-        }
-
-        public void setName( String name ){
-        this.name = name;
-        }
-
-        public void setAddress( String add ){
-        this.address = add;
-        }
-
-}
-
-STUDENT
+MakhlukHidup.Java
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */ / komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.
-package Extend.M11; //menentukan package di mana kelas "Student" akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
+ */ //komentar yang secara otomatis ditambahkan oleh IDE (Integrated Development Environment) NetBeans. Komentar ini memberikan informasi tentang cara mengubah lisensi dan mengedit template kelas.
+package Juni23; //Baris ini menunjukkan bahwa kelas MakhlukHidup berada di dalam paket (package) Juni23. Paket adalah struktur organisasi yang digunakan untuk mengelompokkan kelas-kelas terkait.
 
 /**
  *
- * @author HP 840 G3 //komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.
+ * @author HP 840 G3 //Ini adalah komentar dokumentasi yang memberikan informasi tentang kelas ini. Komentar ini menyatakan bahwa kelas ini dibuat oleh penulis dengan nama "HP 840 G3". Komentar dokumentasi ini juga dapat digunakan untuk menjelaskan fungsionalitas kelas dan metode-metodenya.
  */
-public class Student extends Person{
-    public Student(){
-        super("Hafizhoh","Solok");
-        System.out.println("Inside student:Constructor");
-       //beberapa kode di sini
-    } 
-    
-    @Override
-    public String getName(){
-        System.out.println("Student:getname");
-        return name;
-    }
+public abstract class MakhlukHidup { //Kelas MakhlukHidup dideklarasikan sebagai kelas abstrak dengan kata kunci abstract. Kelas abstrak tidak dapat diinstansiasi langsung, tetapi digunakan sebagai kerangka kerja untuk kelas-kelas turunannya. Kelas abstrak dapat memiliki metode konkrit dan metode abstrak.
 
-    public static void main( String[] args ){
-    Student anna = new Student();
-    System.out.println("Nama "+anna.name);
-    System.out.println("Alamat "+anna.address);
-    } 
-    
-}
-
-//Kode di atas mendefinisikan kelas "Student" yang merupakan subclass dari kelas "Person". Kelas "Student" mewarisi semua variabel dan metode dari kelas "Person" menggunakan kata kunci extends. Dalam hal ini, kelas "Student" mewarisi variabel name dan address serta metode getName(), getAddress(), setName(), dan setAddress() dari kelas "Person".
-
-//Kelas "Student" memiliki konstruktor yang digunakan untuk menginisialisasi variabel name dan address menggunakan konstruktor dari kelas "Person" menggunakan kata kunci super. Konstruktor ini juga mencetak pesan "Inside student:Constructor" ke konsol.
-
-//Metode getName() di-override dengan implementasi khusus untuk kelas "Student". Metode ini mencetak pesan "Student:getname" ke konsol dan mengembalikan nilai variabel name.
-
-//Metode main(String[] args) adalah metode utama yang digunakan untuk menjalankan program. Di dalamnya, sebuah objek anna dari kelas "Student" dibuat. Kemudian, nilai dari variabel name dan address dari objek anna dicetak ke konsol menggunakan System.out.println().
-
-STUDENT RECORD
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */ //komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.
-package Extend.M11; // menentukan package di mana kelas "StudentRecord" akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
-
-/**
- *
- * @author HP 840 G3 //komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.
- */
-public class StudentRecord {
-    protected String name;
-    protected String address;
-    protected String age;
-        
-    public StudentRecord(){
-        System.out.println("SuperClass");
-    }
-    
-    public StudentRecord(String name, String address, String age){
-        this.name = name;
-        this.address = address;
-        this.age = age;
-    }
-    
-    public StudentRecord(String name){
-        this.name = name;
-        this.address = "";
-        this.age ="";
-    }
-    
-    public String getName(){
-        System.out.println("StudentRecord name:" + name);
-        return name;
-    }
-    public String getAddress(){
-        return address;
-    }
-     public String getAge(){
-        return age;
-    }
-     
-      
-    public void setName(String name){
-        this.name = name;
-    }
-    public void setAddress(String address){
-        this.address = address;
-    }
-    public void setAge(String age){
-        this.age= age;
-    }
-}
-
-//Kode di atas mendefinisikan kelas "StudentRecord". Kelas ini memiliki beberapa variabel instance yaitu name, address, dan age, yang memiliki tingkatan akses protected. Tingkatan akses protected memungkinkan variabel tersebut diakses oleh kelas yang mewarisi "StudentRecord".
-
-//Kelas "StudentRecord" memiliki beberapa konstruktor dengan berbagai parameter. Konstruktor tanpa parameter (public StudentRecord()) mencetak pesan "SuperClass" ke konsol.
-
-//Ada juga konstruktor yang menerima tiga parameter (public StudentRecord(String name, String address, String age)) yang digunakan untuk menginisialisasi variabel name, address, dan age menggunakan nilai yang diberikan.
-
-//Konstruktor lainnya adalah konstruktor yang hanya menerima satu parameter (public StudentRecord(String name)) yang digunakan untuk menginisialisasi variabel name dengan nilai yang diberikan, sementara variabel address dan age diatur sebagai string kosong.
-
-//Kelas "StudentRecord" memiliki metode getter dan setter untuk variabel name, address, dan age. Metode getter (getName(), getAddress(), getAge()) digunakan untuk mengambil nilai variabel, sedangkan metode setter (setName(), setAddress(), setAge()) digunakan untuk mengatur nilai variabel.
-
-//Metode getName() mencetak pesan "StudentRecord name: [nilai name]" ke konsol dan mengembalikan nilai variabel name.
-
-//Seluruh kode dalam kelas "StudentRecord" berada di dalam blok kurung {} yang menandakan batasan dari kelas ini.
-
-STUDENT COMPUTER
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */ //komentar yang memberikan instruksi tentang bagaimana mengubah lisensi dan template untuk kelas Java ini.
-package Extend.M11; //menentukan package di mana kelas "StudentComputer" akan berada. Package ini digunakan untuk mengelompokkan kelas-kelas yang terkait secara logis.
-
-/**
- *
- * @author HP 840 G3 //komentar Javadoc yang memberikan informasi tentang penulis (author) kelas ini.
-
-//mendefinisikan kelas "StudentComputer" yang merupakan turunan dari kelas "StudentRecord". Kelas ini memiliki beberapa variabel instance yaitu network, pbo, web, dan average yang bertipe data double.
-public class StudentComputer extends StudentRecord {
-   double network;
-   double pbo;
-   double web;
-   double average;
+    public void bernafas(){
+        System.out.println("Bernafas");
+    } //Metode bernafas() adalah metode konkrit yang didefinisikan di dalam kelas abstrak MakhlukHidup. Metode ini mencetak teks "Bernafas" ke output konsol.
    
-   //***NETWORK***//
-   public double getNetwork (){
-        return network;
+    public abstract void jalan();
+   //Metode jalan() adalah metode abstrak yang dideklarasikan di dalam kelas abstrak MakhlukHidup. Metode ini tidak memiliki implementasi di dalam kelas ini, tetapi akan diimplementasikan oleh kelas-kelas turunannya. Kelas turunan yang mengimplementasikan kelas abstrak harus memberikan implementasi untuk semua metode abstrak yang dideklarasikan dalam kelas abstrak tersebut.
+
+//Dengan demikian, kelas abstrak MakhlukHidup memiliki dua metode, yaitu metode konkrit bernafas() dan metode abstrak jalan(). Kelas-kelas turunan dari MakhlukHidup harus memberikan implementasi untuk metode jalan() sesuai dengan kebutuhan mereka.
+}
+
+Manusia.Java
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */ /Komentar ini mirip dengan yang dijelaskan sebelumnya. Ini adalah komentar yang secara otomatis ditambahkan oleh IDE (Integrated Development Environment) NetBeans. Komentar ini memberikan informasi tentang cara mengubah lisensi dan mengedit template kelas.
+
+package Juni23; //Baris ini menunjukkan bahwa kelas Manusia berada di dalam paket (package) Juni23. Paket adalah struktur organisasi yang digunakan untuk mengelompokkan kelas-kelas terkait.
+
+/**
+ *
+ * @author HP 840 G3 //Ini adalah komentar dokumentasi yang memberikan informasi tentang kelas ini. Komentar ini menyatakan bahwa kelas ini dibuat oleh penulis dengan nama "HP 840 G3". Komentar dokumentasi ini juga dapat digunakan untuk menjelaskan fungsionalitas kelas dan metode-metodenya.
+ * 
+ */
+public class Manusia extends MakhlukHidup { //Kelas Manusia dideklarasikan sebagai kelas publik yang merupakan turunan dari kelas MakhlukHidup. Dengan kata kunci extends, kelas Manusia mewarisi semua atribut dan metode dari kelas MakhlukHidup. Hal ini berarti kelas Manusia akan memiliki metode bernafas() yang diwarisi dari kelas MakhlukHidup dan harus memberikan implementasi untuk metode abstrak jalan() yang dideklarasikan dalam kelas MakhlukHidup.
+
+    public void jalan(){
+        System.out.println("Berjalan Manusia");
+    } /Metode jalan() didefinisikan di dalam kelas Manusia. Metode ini memberikan implementasi untuk metode abstrak jalan() yang dideklarasikan dalam kelas MakhlukHidup. Dalam implementasinya, metode ini mencetak teks "Berjalan Manusia" ke output konsol.
+    
+    public static void main(String[] args) {
+        Manusia m = new Manusia();
+        m.bernafas();
+        m.jalan();
     }
-    public void setNetwork (double network){
-        this.network = network;
+   //Metode main() adalah metode utama yang akan dieksekusi saat program dijalankan. Di dalam metode ini, objek m dari kelas Manusia dibuat menggunakan konstruktor default new Manusia(). Setelah itu, metode bernafas() dan jalan() dipanggil pada objek m untuk mengeksekusi fungsionalitas yang diimplementasikan di dalam kelas Manusia.
+
+//Dengan demikian, kelas Manusia merupakan turunan dari kelas abstrak MakhlukHidup dan mengimplementasikan metode jalan() sesuai dengan kebutuhan kelas tersebut. Dalam metode main(), objek Manusia dibuat dan metode-metode pada objek tersebut dipanggil untuk menunjukkan penggunaan fungsionalitas kelas Manusia.
+}
+
+Interface.Java
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */ //Komentar ini mirip dengan yang dijelaskan sebelumnya. Ini adalah komentar yang secara otomatis ditambahkan oleh IDE (Integrated Development Environment) NetBeans. Komentar ini memberikan informasi tentang cara mengubah lisensi dan mengedit template kelas.
+
+package Juni23; //Baris ini menunjukkan bahwa interface Relation berada di dalam paket (package) Juni23. Paket adalah struktur organisasi yang digunakan untuk mengelompokkan kelas-kelas terkait.
+
+/**
+ * 
+ * @author HP 840 G3 //Ini adalah komentar dokumentasi yang memberikan informasi tentang interface ini. Komentar ini menyatakan bahwa interface ini dibuat oleh penulis dengan nama "HP 840 G3". Komentar dokumentasi ini juga dapat digunakan untuk menjelaskan fungsionalitas interface dan metode-metodenya.
+
+java
+ */
+public interface Relation {
+    public boolean isGreater( Object a, Object b); 
+    public boolean isLess( Object a, Object b); 
+    public boolean isEqual( Object a, Object b);
+}
+//Interface Relation dideklarasikan dengan kata kunci interface. Interface adalah kontrak yang mendefinisikan metode-metode yang harus diimplementasikan oleh kelas-kelas yang menggunakan interface tersebut.
+
+//Dalam interface Relation, terdapat tiga metode yang harus diimplementasikan oleh kelas-kelas yang mengimplementasikan interface ini:
+
+//Metode isGreater(Object a, Object b) mengambil dua parameter objek a dan b, dan mengembalikan nilai boolean yang menunjukkan apakah a lebih besar dari b.
+//Metode isLess(Object a, Object b) mengambil dua parameter objek a dan b, dan mengembalikan nilai boolean yang menunjukkan apakah a lebih kecil dari b.
+//Metode isEqual(Object a, Object b) mengambil dua parameter objek a dan b, dan mengembalikan nilai boolean yang menunjukkan apakah a sama dengan b.
+//Dengan menggunakan interface Relation, kelas-kelas lain dapat mengimplementasikan metode-metode ini sesuai dengan logika yang diperlukan. Interface ini menyediakan kontrak untuk menggambarkan hubungan relasional antara objek-objek dalam kelas-kelas yang mengimplementasikannya.
+
+PersegiPanjang.Java
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */ //Komentar ini mirip dengan yang dijelaskan sebelumnya. Ini adalah komentar yang secara otomatis ditambahkan oleh IDE (Integrated Development Environment) NetBeans. Komentar ini memberikan informasi tentang cara mengubah lisensi dan mengedit template kelas.
+
+package Juni23; //Baris ini menunjukkan bahwa kelas PersegiPanjang berada di dalam paket (package) Juni23. Paket adalah struktur organisasi yang digunakan untuk mengelompokkan kelas-kelas terkait.
+
+/**
+ *
+ * @author HP 840 G3 //Ini adalah komentar dokumentasi yang memberikan informasi tentang kelas ini. Komentar ini menyatakan bahwa kelas ini dibuat oleh penulis dengan nama "HP 840 G3". Komentar dokumentasi ini juga dapat digunakan untuk menjelaskan fungsionalitas kelas dan metode-metodenya.
+ */
+public class PersegiPanjang implements Relation{ /Kelas PersegiPanjang dideklarasikan sebagai kelas publik yang mengimplementasikan interface Relation. Dengan menggunakan kata kunci implements, kelas PersegiPanjang menyatakan bahwa akan mengimplementasikan metode-metode yang didefinisikan dalam interface Relation.
+
+    private float panjang;
+    private float lebar;
+   //Variabel panjang dan lebar adalah variabel private bertipe float yang digunakan untuk menyimpan nilai panjang dan lebar dari persegi panjang.
+    
+    public PersegiPanjang() {
+    } //Ini adalah konstruktor default untuk kelas PersegiPanjang. Konstruktor ini tidak memiliki parameter dan tidak melakukan tindakan apa pun.    
+
+   
+    public PersegiPanjang(int panjang, int lebar) {
+        this.panjang = panjang;
+        this.lebar = lebar;
+    } //Ini adalah konstruktor lain untuk kelas PersegiPanjang. Konstruktor ini menerima dua parameter panjang dan lebar yang digunakan untuk menginisialisasi variabel instance panjang dan lebar.
+    
+    public float getLuas(){
+        return panjang * lebar;
     }
     
-    //***PBO***//
-    //Kelas "StudentComputer" memiliki beberapa metode getter dan setter untuk variabel network, pbo, web, dan average. Metode getter digunakan untuk mengambil nilai dari variabel, sedangkan metode setter digunakan untuk mengatur nilai variabel.
-     public double getPbo (){
-        return pbo;
+    public float getKeliling(){
+        return (2*panjang)+(2*lebar);
     }
-    public void setPbo (double pbo){
-        this.pbo = pbo;
-    }
-    
-     //***WEB***//
-    public double getWeb (){
-        return web;
-    }
-    public void setWeb (double web){
-        this.web = web;
-    }
-    
-    
-     public double getAverage (){
-         average = (web + pbo + network)/3;
-        return average;
-    }
-    public void setAverage (double average){
-        this.average = average;
-    }
-//Kelas "StudentComputer" juga mengimplementasikan metode getName() dengan anotasi @Override. Metode ini akan mencetak nama yang disimpan dalam variabel name dan mengembalikan nilainya.
+    //Metode getLuas() mengembalikan luas persegi panjang dengan mengalikan panjang dengan lebar. Metode getKeliling() mengembalikan keliling persegi panjang dengan menggunakan rumus 2 * panjang + 2 * lebar.
+   
     @Override
-    public String getName(){
-        System.out.println("StudentComputer = " + name);
-        return name;
+    public boolean isGreater(Object a, Object b) { ////Metode isGreater() membandingkan luas dua objek persegi panjang a dan b. Metode ini mengambil objek sebagai parameter, mengakses luas persegi panjang menggunakan metode getLuas(), dan membandingkan luasnya menggunakan operator >.
+        float luas_a = ((PersegiPanjang) a).getLuas();
+        float luas_b = ((PersegiPanjang) b).getLuas();
+        return luas_a > luas_b;
     }
 
-    //Metode main() di kelas "StudentComputer" digunakan untuk menguji kelas ini. Di dalamnya, sebuah objek siswa1 dari kelas "StudentComputer" dibuat dan diinisialisasi dengan nilai-nilai menggunakan metode setter. Kemudian, objek siswa1 ditugaskan ke variabel referensi ref dari tipe "StudentRecord". Metode setter setName(), setAddress(), dan setAge() dipanggil melalui variabel ref untuk mengatur nilai nama, alamat, dan umur.
-    public static void main(String[] args){
-        StudentComputer siswa1 = new StudentComputer();
-            siswa1.setNetwork(90);
-            siswa1.setPbo(88);
-            siswa1.setWeb(96);
-           
-            StudentRecord ref;
-            ref = siswa1;
-            ref.setName("Hafizhoh");
-            ref.setAddress("Padang");
-            ref.setAge("18 Tahun");
-
-            //hasil dari metode getter dan perhitungan rata-rata nilai kompetisi komputer dicetak menggunakan metode println() dari kelas System.out.
-            System.out.println("Nama      = " + ref.getName());
-            System.out.println("Alamat    = " + ref.getAddress());
-            System.out.println("Umur      = " + ref.getAge());
-            System.out.println("\nNilai Kompetisi Komputer");
-            System.out.println("PBO       = " + siswa1.getPbo());
-            System.out.println("NETWORK   = " + siswa1.getNetwork());
-            System.out.println("WEB       = " + siswa1.getWeb());
-            System.out.println("Rata-rata = " + siswa1.getAverage());    
+    @Override
+    public boolean isLess(Object a, Object b) { //Metode isLess() melakukan hal yang sama seperti isGreater(), tetapi menggunakan operator < untuk membandingkan luas persegi panjang.
+        float luas_a = ((PersegiPanjang) a).getLuas();
+        float luas_b = ((PersegiPanjang) b).getLuas();
+        return luas_a < luas_b;
     }
+
+    @Override
+    public boolean isEqual(Object a, Object b) { //Metode isEqual() juga melakukan hal yang sama, tetapi menggunakan operator == untuk membandingkan luas persegi panjang.
+        float luas_a = ((PersegiPanjang) a).getLuas();
+        float luas_b = ((PersegiPanjang) b).getLuas();
+        return luas_a == luas_b;
+    }
+   //Karena kelas PersegiPanjang mengimplementasikan interface Relation, kelas ini harus mengimplementasikan semua metode yang didefinisikan dalam interface tersebut. Metode isGreater(), isLess(), dan isEqual() diimplementasikan dalam kelas PersegiPanjang.
     
+    public static void main(String[] args) {
+        PersegiPanjang p1 = new PersegiPanjang(5, 2);
+        PersegiPanjang p2 = new PersegiPanjang(4, 3);
+        Relation r = new PersegiPanjang();
+        System.out.println("Luas p1 > luas p2" + r.isGreater(p1, p2) );
+        System.out.println("Luas p1 < luas p2" + r.isLess(p1, p2) );
+    }
+     //Metode main() adalah metode utama yang akan dieksekusi saat program dijalankan. Di dalam metode ini, dua objek PersegiPanjang dibuat menggunakan konstruktor yang menerima panjang dan lebar. Objek p1 memiliki panjang 5 dan lebar 2, sedangkan objek p2 memiliki panjang 4 dan lebar 3.
+
+//Kemudian, objek r dari interface Relation juga dibuat dan diinisialisasi sebagai objek PersegiPanjang. Metode isGreater() dan isLess() dipanggil pada objek r untuk membandingkan luas p1 dan p2, dan hasilnya dicetak ke output konsol.
 }
